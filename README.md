@@ -19,7 +19,7 @@ Insert camera to the camera port in Raspberry Pi
 Download OS from Raspberry official website and install it in Pi.
 Download VNCViewer to desktop.
 Connect Pi with desktop by Enternet wire.
-Open VNCViwer. Enter local: raspberrypi.local. Enter user name: pi. Enter password: raspberry
+Open VNCViwer. Enter local: raspberrypi.local. Enter user name: pi. Enter password: raspberry.
 
 
 ## Module 1(Raspberry-Pi):
@@ -39,8 +39,8 @@ Install requests, based64 and json library.
 #### function:
 It is called by motionsensor.py and it can send the image to openalpr and find the plate number in image. Openalpr is a website which can analyze the plate number in the image by using machile learning with a high accuracy. 
 #### variables:
-status: it can be either "Exiting" or "Entering" dependent on whehter this camera is set in exit or entrance of the
-garage.
+status: it can be either "Exiting" or "Entering" dependent on whehter this camera is set in exit or entrance of the garage.
+
 secret_key: secret_key in your openalpr account in the CarCheckAPI section.
 
 ### upload.py:
@@ -73,13 +73,16 @@ Add a new user to AWS IAM, set permission policy to allow AWS SNS service and do
 Open AWS SNS and set message type to tranctional.
 Install botos3 and pandas library.
 #### function:
-This file is compiled in an AWS SageMaker notebook instance. It can keep accessing the data in the AWS IoT Analytics dataset to see if there is new data added. If new data is detected and it has a status with "Exiting", program
-will search the entering time of the vehicle and send a SMS to the user of the vehicle based on a predefined dictionary.
+This file is compiled in an AWS SageMaker notebook instance. It can keep accessing the data in the AWS IoT Analytics dataset to see if there is new data added. If new data is detected and it has a status with "Exiting", program will search the entering time of the vehicle and send a SMS to the user of the vehicle based on a predefined dictionary.
 #### variable:
-dataset: name of dataset in AWS IoT Analytics
+dataset: name of dataset in AWS IoT Analytics.
+
 dict: dictionary that stores the users' phone number and vehicle number. Key: vehicle plate number. Value: vehicle's contact number.
+
 aws_access_key_id: keyid in IAM new user.
+
 aws_secret_access_key: secret key in IAM new user.
+
 
 
 ## Conclusion:
