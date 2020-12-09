@@ -8,6 +8,15 @@ This file is a source code for a smart garage charging system written in Python.
 3. HC-SR501 Pir Motion IR Sensor Body Module Infrared for Arduino Raspberry Pi
 4. Three Female-to-Female Wires
 
+## Required Software:
+1. Python
+2. Node-Red
+3. OpenALPR Account
+4. AWS IoT Analytics
+5. AWS SageMaker
+6. AWS SNS
+
+
 ## Hardware Setup:
 1. Montion Sensor:
 Raspberry Pi Pin Layer: https://www.electronicwings.com/raspberry-pi/raspberry-pi-gpio-access
