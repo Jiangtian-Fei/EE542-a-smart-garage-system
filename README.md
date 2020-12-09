@@ -55,8 +55,11 @@ url: link of Node-Red for uploading data
 ### node-red flow.txt:
 #### prerequisites:
 Create a AWS IoT thing and get its url link.
+
 Download corresponding certificate, private key, and CA certificate and upload them to the Node-red http request TLS configuration.
+
 Make sure permission is allowed to upload data to Node-Red.
+
 #### function:
 This file can be imported to Node-Red to create the data flow from Raspberry Pi to Node-Red to AWS IoT thing.
 #### variable:
@@ -67,10 +70,15 @@ url: link of AWS IoT thing for uploading data
 ### Parking.py:
 #### prerequisites:
 Create AWS IoT Analytics resources including channel, pipeline, datestore, and dataset.
+
 Create an IoT rule to forward messages received by the IoT thing to IoT Analytics.
+
 Open a notebook instance in AWS Sagemaker and configure its IAM role to get dataset content.
+
 Add a new user to AWS IAM, set permission policy to allow AWS SNS service and download keyid and secret key.
+
 Open AWS SNS and set message type to tranctional.
+
 Install botos3 and pandas library.
 #### function:
 This file is compiled in an AWS SageMaker notebook instance. It can keep accessing the data in the AWS IoT Analytics dataset to see if there is new data added. If new data is detected and it has a status with "Exiting", program will search the entering time of the vehicle and send a SMS to the user of the vehicle based on a predefined dictionary.
