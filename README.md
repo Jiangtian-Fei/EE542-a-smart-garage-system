@@ -1,4 +1,9 @@
 # EE542-a-smart-garage-system
+
+## Contributor:
+#### Jiangtian Fei
+#### Zhangling Huang
+
 ## Purpose:
 This file is a source code for a smart garage charging system written in Python. It is triggered by a motion sensor to capture car image by Raspberry Pi Model B+. Then, by going through a pre-trained machine learning model, it can analyzes the plate number in the image and send plate number to Node-Red, which will redirect the number to AWS IoT Analytics later. In the AWS EC2, a virtual machine will keep getting updated from the AWS IoT Analytics to monitor the entering and exiting of the car in the garage. Once the car exits garage, it will send a SMS of receipts, including vehicle plate number, parking time and parking fees, to the users.
 
